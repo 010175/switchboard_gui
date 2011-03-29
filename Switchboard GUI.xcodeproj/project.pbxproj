@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0FC2894133F93510087A23F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC2893133F93510087A23F /* Cocoa.framework */; };
+		F0FC289E133F93510087A23F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0FC289C133F93510087A23F /* InfoPlist.strings */; };
+		F0FC28A1133F93510087A23F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC28A0133F93510087A23F /* main.m */; };
+		F0FC28A4133F93510087A23F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F0FC28A2133F93510087A23F /* Credits.rtf */; };
+		F0FC28A7133F93510087A23F /* Switchboard_GUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC28A6133F93510087A23F /* Switchboard_GUIAppDelegate.m */; };
+		F0FC28AA133F93510087A23F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FC28A8133F93510087A23F /* MainMenu.xib */; };
+		F0FC28B1133F93510087A23F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FC2893133F93510087A23F /* Cocoa.framework */; };
+		F0FC28B9133F93510087A23F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0FC28B7133F93510087A23F /* InfoPlist.strings */; };
+		F0FC28BC133F93510087A23F /* Switchboard_GUITests.h in Resources */ = {isa = PBXBuildFile; fileRef = F0FC28BB133F93510087A23F /* Switchboard_GUITests.h */; };
+		F0FC28BE133F93510087A23F /* Switchboard_GUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FC28BD133F93510087A23F /* Switchboard_GUITests.m */; };
+		F0FC28D813405AFB0087A23F /* Anonymous Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0FC28D713405AFB0087A23F /* Anonymous Pro.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0FC28B2133F93510087A23F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FC2886133F93500087A23F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FC288E133F93510087A23F;
+			remoteInfo = "Switchboard GUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0FC288F133F93510087A23F /* Switchboard GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Switchboard GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FC2893133F93510087A23F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F0FC2896133F93510087A23F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F0FC2897133F93510087A23F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F0FC2898133F93510087A23F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F0FC289B133F93510087A23F /* Switchboard GUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Switchboard GUI-Info.plist"; sourceTree = "<group>"; };
+		F0FC289D133F93510087A23F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0FC289F133F93510087A23F /* Switchboard GUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Switchboard GUI-Prefix.pch"; sourceTree = "<group>"; };
+		F0FC28A0133F93510087A23F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0FC28A3133F93510087A23F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F0FC28A5133F93510087A23F /* Switchboard_GUIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switchboard_GUIAppDelegate.h; sourceTree = "<group>"; };
+		F0FC28A6133F93510087A23F /* Switchboard_GUIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switchboard_GUIAppDelegate.m; sourceTree = "<group>"; };
+		F0FC28A9133F93510087A23F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F0FC28B0133F93510087A23F /* Switchboard GUITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Switchboard GUITests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FC28B6133F93510087A23F /* Switchboard GUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Switchboard GUITests-Info.plist"; sourceTree = "<group>"; };
+		F0FC28B8133F93510087A23F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0FC28BA133F93510087A23F /* Switchboard GUITests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Switchboard GUITests-Prefix.pch"; sourceTree = "<group>"; };
+		F0FC28BB133F93510087A23F /* Switchboard_GUITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Switchboard_GUITests.h; sourceTree = "<group>"; };
+		F0FC28BD133F93510087A23F /* Switchboard_GUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Switchboard_GUITests.m; sourceTree = "<group>"; };
+		F0FC28D713405AFB0087A23F /* Anonymous Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anonymous Pro.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0FC288C133F93510087A23F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC2894133F93510087A23F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FC28AC133F93510087A23F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC28B1133F93510087A23F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0FC2884133F93500087A23F = {
+			isa = PBXGroup;
+			children = (
+				F0FC2899133F93510087A23F /* Switchboard GUI */,
+				F0FC28B4133F93510087A23F /* Switchboard GUITests */,
+				F0FC2892133F93510087A23F /* Frameworks */,
+				F0FC2890133F93510087A23F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0FC2890133F93510087A23F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC288F133F93510087A23F /* Switchboard GUI.app */,
+				F0FC28B0133F93510087A23F /* Switchboard GUITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0FC2892133F93510087A23F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC2893133F93510087A23F /* Cocoa.framework */,
+				F0FC2895133F93510087A23F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0FC2895133F93510087A23F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC2896133F93510087A23F /* AppKit.framework */,
+				F0FC2897133F93510087A23F /* CoreData.framework */,
+				F0FC2898133F93510087A23F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F0FC2899133F93510087A23F /* Switchboard GUI */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC28A5133F93510087A23F /* Switchboard_GUIAppDelegate.h */,
+				F0FC28A6133F93510087A23F /* Switchboard_GUIAppDelegate.m */,
+				F0FC28A8133F93510087A23F /* MainMenu.xib */,
+				F0FC289A133F93510087A23F /* Supporting Files */,
+			);
+			path = "Switchboard GUI";
+			sourceTree = "<group>";
+		};
+		F0FC289A133F93510087A23F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC28D713405AFB0087A23F /* Anonymous Pro.ttf */,
+				F0FC289B133F93510087A23F /* Switchboard GUI-Info.plist */,
+				F0FC289C133F93510087A23F /* InfoPlist.strings */,
+				F0FC289F133F93510087A23F /* Switchboard GUI-Prefix.pch */,
+				F0FC28A0133F93510087A23F /* main.m */,
+				F0FC28A2133F93510087A23F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0FC28B4133F93510087A23F /* Switchboard GUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC28BB133F93510087A23F /* Switchboard_GUITests.h */,
+				F0FC28BD133F93510087A23F /* Switchboard_GUITests.m */,
+				F0FC28B5133F93510087A23F /* Supporting Files */,
+			);
+			path = "Switchboard GUITests";
+			sourceTree = "<group>";
+		};
+		F0FC28B5133F93510087A23F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0FC28B6133F93510087A23F /* Switchboard GUITests-Info.plist */,
+				F0FC28B7133F93510087A23F /* InfoPlist.strings */,
+				F0FC28BA133F93510087A23F /* Switchboard GUITests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0FC288E133F93510087A23F /* Switchboard GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FC28C1133F93510087A23F /* Build configuration list for PBXNativeTarget "Switchboard GUI" */;
+			buildPhases = (
+				F0FC288B133F93510087A23F /* Sources */,
+				F0FC288C133F93510087A23F /* Frameworks */,
+				F0FC288D133F93510087A23F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Switchboard GUI";
+			productName = "Switchboard GUI";
+			productReference = F0FC288F133F93510087A23F /* Switchboard GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0FC28AF133F93510087A23F /* Switchboard GUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FC28C4133F93510087A23F /* Build configuration list for PBXNativeTarget "Switchboard GUITests" */;
+			buildPhases = (
+				F0FC28AB133F93510087A23F /* Sources */,
+				F0FC28AC133F93510087A23F /* Frameworks */,
+				F0FC28AD133F93510087A23F /* Resources */,
+				F0FC28AE133F93510087A23F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0FC28B3133F93510087A23F /* PBXTargetDependency */,
+			);
+			name = "Switchboard GUITests";
+			productName = "Switchboard GUITests";
+			productReference = F0FC28B0133F93510087A23F /* Switchboard GUITests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0FC2886133F93500087A23F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F0FC2889133F93500087A23F /* Build configuration list for PBXProject "Switchboard GUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0FC2884133F93500087A23F;
+			productRefGroup = F0FC2890133F93510087A23F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0FC288E133F93510087A23F /* Switchboard GUI */,
+				F0FC28AF133F93510087A23F /* Switchboard GUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0FC288D133F93510087A23F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC289E133F93510087A23F /* InfoPlist.strings in Resources */,
+				F0FC28A4133F93510087A23F /* Credits.rtf in Resources */,
+				F0FC28AA133F93510087A23F /* MainMenu.xib in Resources */,
+				F0FC28D813405AFB0087A23F /* Anonymous Pro.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FC28AD133F93510087A23F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC28B9133F93510087A23F /* InfoPlist.strings in Resources */,
+				F0FC28BC133F93510087A23F /* Switchboard_GUITests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0FC28AE133F93510087A23F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0FC288B133F93510087A23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC28A1133F93510087A23F /* main.m in Sources */,
+				F0FC28A7133F93510087A23F /* Switchboard_GUIAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FC28AB133F93510087A23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FC28BE133F93510087A23F /* Switchboard_GUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0FC28B3133F93510087A23F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FC288E133F93510087A23F /* Switchboard GUI */;
+			targetProxy = F0FC28B2133F93510087A23F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0FC289C133F93510087A23F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FC289D133F93510087A23F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F0FC28A2133F93510087A23F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FC28A3133F93510087A23F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F0FC28A8133F93510087A23F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FC28A9133F93510087A23F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F0FC28B7133F93510087A23F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FC28B8133F93510087A23F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0FC28BF133F93510087A23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F0FC28C0133F93510087A23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F0FC28C2133F93510087A23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Switchboard GUI/Switchboard GUI-Prefix.pch";
+				INFOPLIST_FILE = "Switchboard GUI/Switchboard GUI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F0FC28C3133F93510087A23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Switchboard GUI/Switchboard GUI-Prefix.pch";
+				INFOPLIST_FILE = "Switchboard GUI/Switchboard GUI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F0FC28C5133F93510087A23F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Switchboard GUI.app/Contents/MacOS/Switchboard GUI";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Switchboard GUITests/Switchboard GUITests-Prefix.pch";
+				INFOPLIST_FILE = "Switchboard GUITests/Switchboard GUITests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F0FC28C6133F93510087A23F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Switchboard GUI.app/Contents/MacOS/Switchboard GUI";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Switchboard GUITests/Switchboard GUITests-Prefix.pch";
+				INFOPLIST_FILE = "Switchboard GUITests/Switchboard GUITests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0FC2889133F93500087A23F /* Build configuration list for PBXProject "Switchboard GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FC28BF133F93510087A23F /* Debug */,
+				F0FC28C0133F93510087A23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FC28C1133F93510087A23F /* Build configuration list for PBXNativeTarget "Switchboard GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FC28C2133F93510087A23F /* Debug */,
+				F0FC28C3133F93510087A23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F0FC28C4133F93510087A23F /* Build configuration list for PBXNativeTarget "Switchboard GUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FC28C5133F93510087A23F /* Debug */,
+				F0FC28C6133F93510087A23F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0FC2886133F93500087A23F /* Project object */;
+}
