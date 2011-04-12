@@ -21,6 +21,8 @@
     
     BOOL    switchBoardCanQuit;
     
+  
+    
 @private
     NSWindow *window;
     
@@ -29,6 +31,8 @@
 -(IBAction)resetButtonAction:(id)sender;
 -(IBAction)locationTextFieldAction:(id)sender;
 -(IBAction)webConsoleURLTextFieldAction:(id)sender;
+
+-(void)savePreferences;
 
 @property (assign) IBOutlet NSWindow    *window;
 @property (assign) IBOutlet NSTextView  *textView;

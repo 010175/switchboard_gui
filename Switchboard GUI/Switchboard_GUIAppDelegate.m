@@ -11,7 +11,6 @@
 @implementation Switchboard_GUIAppDelegate
 @synthesize window, textView, resetButton, webConsoleURLTextField, locationTextField;
 
-
 - (void)startSwitchBoardTask
 {
     
@@ -22,7 +21,6 @@
     
     switchboardTask = [[NSTask alloc]init];
     
-    
     NSURL *meBundleURL = [[NSBundle mainBundle] bundleURL];
     NSURL *switchboardURL = [[meBundleURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:@"Switchboard"];
     NSURL *plistURL =  [[meBundleURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:@"preferences.plist"];
@@ -30,13 +28,12 @@
     NSString *switchboardPath = [switchboardURL path];
     NSLog(@"path is %@",switchboardPath);
     
-    [switchboardTask setLaunchPath:
-     [switchboardPath stringByExpandingTildeInPath]];
+    [switchboardTask setLaunchPath:[switchboardPath stringByExpandingTildeInPath]];
     
     NSData *plistData = [NSData dataWithContentsOfURL:plistURL];
     NSString *error;
     NSPropertyListFormat format;
- 
+    
     NSMutableDictionary *md = (NSMutableDictionary *)[NSPropertyListSerialization
                                                       propertyListFromData:plistData
                                                       mutabilityOption:NSPropertyListMutableContainersAndLeaves
@@ -46,23 +43,23 @@
     if(!md){
         NSLog(@"preferences read error%@",error);
         [error release];
+            
+        [locationTextField setStringValue:@"nowhere"];
+        [webConsoleURLTextField setStringValue:@"http://www.010175.net/monolithe/"];
+        [self savePreferences];
+        
     } else {
         
         NSLog(@"preferences read ok");
+        
+        NSString *location =  [md objectForKey:@"Location"];
+        NSString *webConsoleURL =  [md objectForKey:@"Web Console URL"];
+        
+        [locationTextField setStringValue:location];
+        [webConsoleURLTextField setStringValue:webConsoleURL];
     }
     
-    NSString *location =  [md objectForKey:@"Location"];
-    NSString *webConsoleURL =  [md objectForKey:@"Web Console URL"];
-    
-    [locationTextField setStringValue:location];
-    [webConsoleURLTextField setStringValue:webConsoleURL];
-    
-    
-    //plistData=[[NSData alloc] initWithContentsOfURL:preferencesFileURL];
-    
-       //NSLog(@"data : %@",plistData);
-    // [switchboardTask setCurrentDirectoryPath:
-    // [@"/Users/guillaume/Usine/[build]/Debug/" stringByExpandingTildeInPath]];
+  
     
     [switchboardTask setStandardOutput:thePipe];
     [switchboardTask setStandardError: [switchboardTask standardOutput]];
@@ -71,12 +68,20 @@
     [switchboardTask launch];
     [switchboardTask release];
     
+      
+    
 }
 
--(void)readPreferences
+-(void)savePreferences
 {
     
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [locationTextField stringValue], @"Location",  [webConsoleURLTextField stringValue], @"Web Console URL", nil];        
     
+    NSURL *meBundleURL = [[NSBundle mainBundle] bundleURL];
+    NSURL *plistURL =  [[meBundleURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:@"preferences.plist"];
+    
+    [dict writeToURL:plistURL atomically:YES];
     
 }
 
@@ -94,11 +99,14 @@
 -(IBAction)locationTextFieldAction:(id)sender
 {
     NSLog(@"location changed");
+    [self savePreferences];
+    
 }
 
 -(IBAction)webConsoleURLTextFieldAction:(id)sender{
- 
+    
     NSLog(@"url changed");
+    [self savePreferences];
 }
 
 
@@ -146,21 +154,17 @@
 - (void)switchboardEnded:(NSNotification *)aNotification {
     
     NSLog(@"switchboard ended");
-    
     if (switchBoardCanQuit){
         if ([switchboardTask isRunning])
             [switchboardTask terminate];
         
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-        
         NSLog(@"quit");
         
     } else { // restart switchboard
         
         NSLog(@"restarting..");
-        
         [self startSwitchBoardTask];
-        
     }
 }
 
@@ -179,6 +183,9 @@
     
     [textView setString: [[textView string]stringByAppendingString :text]];
     [text release];
+    
+    [textView scrollRangeToVisible:NSMakeRange([[textView string] length] - 1,0)];
+    
     if( data!=0 )
         [pipeOutputFileHandle readInBackgroundAndNotify];
 }
