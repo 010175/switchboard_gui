@@ -9,7 +9,7 @@
 #import "Switchboard_GUIAppDelegate.h"
 
 @implementation Switchboard_GUIAppDelegate
-@synthesize window, textView, resetButton, webConsoleURLTextField, locationTextField;
+@synthesize window, textView, resetButton, webConsoleURLTextField, locationTextField, startupProcessTextField;
 
 - (void)startSwitchBoardTask
 {
@@ -46,6 +46,8 @@
             
         [locationTextField setStringValue:@"nowhere"];
         [webConsoleURLTextField setStringValue:@"http://www.010175.net/monolithe/"];
+        [startupProcessTextField setStringValue:@""];
+        
         [self savePreferences];
         
     } else {
@@ -54,9 +56,11 @@
         
         NSString *location =  [md objectForKey:@"Location"];
         NSString *webConsoleURL =  [md objectForKey:@"Web Console URL"];
+        NSString *startupProcessName =  [md objectForKey:@"Startup Process Name"];
         
         [locationTextField setStringValue:location];
         [webConsoleURLTextField setStringValue:webConsoleURL];
+        [startupProcessTextField setStringValue:startupProcessName];
     }
     
   
@@ -74,9 +78,11 @@
 
 -(void)savePreferences
 {
-    
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
-                          [locationTextField stringValue], @"Location",  [webConsoleURLTextField stringValue], @"Web Console URL", nil];        
+                          [locationTextField stringValue], @"Location",
+                          [webConsoleURLTextField stringValue], @"Web Console URL",
+                          [startupProcessTextField stringValue], @"Startup Process Name",
+                          nil];        
     
     NSURL *meBundleURL = [[NSBundle mainBundle] bundleURL];
     NSURL *plistURL =  [[meBundleURL URLByDeletingLastPathComponent] URLByAppendingPathComponent:@"preferences.plist"];
@@ -106,6 +112,12 @@
 -(IBAction)webConsoleURLTextFieldAction:(id)sender{
     
     NSLog(@"url changed");
+    [self savePreferences];
+}
+
+-(IBAction)startupProcessTextFieldAction:(id)sender{
+    
+    NSLog(@"startup process changed");
     [self savePreferences];
 }
 
